@@ -8,5 +8,5 @@ options:
 
 artifacts:
   objects:
-    location: 'gs:// maven-bucket1234/artifacts/'
+    location: 'gs://maven-bucket1234'
     paths: ['target/*.jar'] # Adjust based on your Maven build output
