@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['clean', 'install']
+  dir: '.' # Adjust if your project is in a subdirectory
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+artifacts:
+  objects:
+    location: 'gs:// maven-bucket1234/artifacts/'
+    paths: ['target/*.jar'] # Adjust based on your Maven build output
